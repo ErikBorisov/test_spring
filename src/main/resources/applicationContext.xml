@@ -14,7 +14,8 @@
     </bean>
 
     <bean id="musicPlayer"
-          class="com.example.test_spring.MusicPlayer">
+          class="com.example.test_spring.MusicPlayer"
+          scope="prototype">
         <property name="music" ref="musicBean"/>
 
         <property name="name" value="${musicPlayer.name}"/>
