@@ -13,25 +13,12 @@
           class="com.example.test_spring.ClassicalMusic">
     </bean>
 
-    <bean id="musicBean1"
-          class="com.example.test_spring.RockMusic">
-    </bean>
-
-    <bean id="musicBean2"
-          class="com.example.test_spring.RapMusic">
-    </bean>
-
     <bean id="musicPlayer"
           class="com.example.test_spring.MusicPlayer">
-    <property name="music">
-        <list>
-            <ref bean="musicBean"/>
-            <ref bean="musicBean1"/>
-            <ref bean="musicBean2"/>
-        </list>
-    </property>
-<!--        <property name="name" value="${musicPlayer.name}"/>-->
-<!--        <property name="volume" value="${musicPlayer.volume}"/>-->
+        <property name="music" ref="musicBean"/>
+
+        <property name="name" value="${musicPlayer.name}"/>
+        <property name="volume" value="${musicPlayer.volume}"/>
     </bean>
 
 </beans>
