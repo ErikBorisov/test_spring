@@ -17,7 +17,10 @@ public class MusicPlayer {
         this.music2 = music2;
     }
 
-    public String playMusic() {
-        return "Playing: " + music1.getSong() + ", " + music2.getSong();
+    public String playMusic(Genre genre) {
+        if (genre.name().equals(Genre.CLASSICAL.name())) {
+            return "Playing: " + music2.getSong();
+        }
+        return "Playing: " + music1.getSong();
     }
 }
